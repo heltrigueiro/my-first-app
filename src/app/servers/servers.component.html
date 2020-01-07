@@ -1,2 +1,24 @@
 <hr>
-<button class="btn btn-primary" [disabled] = "allowNewServer">Add Server</button>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="userName"
+  (input)="onInputEvent($event)"
+>
+<br>
+<button
+  (click)="onClickButton()"
+  class="btn btn-primary"
+  [disabled] = "!allowNewServer">
+  Add User
+</button>
+<button
+  (click)="resetName()"
+  class="btn btn-primary"> Reset name
+</button>
+<br><br>
+<div [hidden]="!showUserAdded">
+  <label>Your Username will be:  </label>
+  <strong>{{updateName()}}</strong>
+</div>
+
