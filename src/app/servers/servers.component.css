@@ -1,0 +1,9 @@
+input {
+  font-style: italic;
+  width: 20%;
+  border-color: blue;
+}
+
+strong {
+  color: blue;
+}
