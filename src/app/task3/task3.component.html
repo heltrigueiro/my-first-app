@@ -1,0 +1,17 @@
+<hr>
+<button
+  class="btn btn-primary"
+  (click)="onClickButtonAddSecret()">
+  Add secret <br>
+</button>
+<button
+  class="btn btn-primary"
+  (click)="onClickButtonShowSecret()">
+  {{secretProperty}} <br>
+</button>
+
+<div [hidden]="hideParagraph"
+     *ngFor="let secret of secretsList; let i = index">
+  <p [ngStyle]="{backgroundColor: getBackgroundByIndex(i)}"
+    [ngClass]="getColorByIndex(i)">{{secret}}</p>
+</div>
